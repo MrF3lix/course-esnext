@@ -1,9 +1,9 @@
 import Header from './header'
-import {getTranslationByKey} from './helpers/translationHelper'
+import { getTranslationByKey } from './helpers/translationHelper'
 
 class App {
     constructor() {
-        console.log('init app')
+        console.log('init app!')
         new Header()
 
         this.getContent()   

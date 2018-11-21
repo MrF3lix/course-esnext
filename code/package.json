@@ -7,7 +7,7 @@
     "build": "npx webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Felix Saaro",
   "license": "ISC",
   "dependencies": {
     "webpack": "^4.26.0"

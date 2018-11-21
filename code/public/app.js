@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Header; });\nclass Header {\n    constructor() {\n        console.log('init header')\n    }\n}\n\n//# sourceURL=webpack:///./src/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Header; });\nclass Header {\n    constructor() {\n        console.log('init header!')\n    }\n}\n\n//# sourceURL=webpack:///./src/header.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getTranslationByKey\", function() { return getTranslationByKey; });\nconst getTranslationByKey = key => {\n    return new Promise(resolve => {\n        setTimeout(() => {\n            resolve(`TRANSLATED: ${key}`)\n        }, 1000);\n    })\n}\n\n//# sourceURL=webpack:///./src/helpers/translationHelper.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getTranslationByKey\", function() { return getTranslationByKey; });\nconst getTranslationByKey = key => {\n    return new Promise(resolve => {\n        setTimeout(() => {\n            resolve(`Translated: ${key}`)\n        }, 1000)\n    })\n}\n\n//# sourceURL=webpack:///./src/helpers/translationHelper.js?");
 
 /***/ }),
 
@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _helpers_translationHelper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/translationHelper */ \"./src/helpers/translationHelper.js\");\n\n\n\nclass App {\n    constructor() {\n        console.log('init app')\n        new _header__WEBPACK_IMPORTED_MODULE_0__[\"default\"]()\n\n        this.getContent()   \n    }\n\n    async getContent() {\n        const translation = await Object(_helpers_translationHelper__WEBPACK_IMPORTED_MODULE_1__[\"getTranslationByKey\"])('test')\n        console.log(translation)\n    }\n}\n\nnew App()\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _helpers_translationHelper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/translationHelper */ \"./src/helpers/translationHelper.js\");\n\n\n\nclass App {\n    constructor() {\n        console.log('init app!')\n        new _header__WEBPACK_IMPORTED_MODULE_0__[\"default\"]()\n\n        this.getContent()   \n    }\n\n    async getContent() {\n        const translation = await Object(_helpers_translationHelper__WEBPACK_IMPORTED_MODULE_1__[\"getTranslationByKey\"])('test')\n        console.log(translation)\n    }\n}\n\nnew App()\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
