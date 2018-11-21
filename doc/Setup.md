@@ -1,3 +1,5 @@
+[Back to home](../README.md)
+
 # Setup a new Project
 
 1. Create a new folder `mkdir edu_esnext` and move there `cd edu_esnext`
