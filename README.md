@@ -1,9 +1,7 @@
 # Course: ES.Next
 
-This repository...
-
 ## Setup
-[Setup](./doc/Setup.md)
+Find out more about the setup process [here](./doc/Setup.md).
 
 ## Features
-[Features](./doc/Features.md)
+Find out more about the ES.Next features [here](./doc/Features.md).
