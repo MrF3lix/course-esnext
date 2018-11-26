@@ -1,6 +1,7 @@
-import Player from "./player";
-import Maze from "./maze";
-import Vector from "./vector";
+import Player from "./player"
+import Maze from "./maze"
+import Vector from "./vector"
+import LevelFactory from './levelFactory'
 
 const KEY_ARROW_LEFT = 37
 const KEY_ARROW_UP = 38
@@ -11,10 +12,24 @@ export default class Game {
     constructor(canvasId) {
         this.initCanvas(canvasId)
         this.ctx = this.canvas.getContext('2d')
-        this.maze = new Maze(this.canvas)
-        this.player = new Player(this.maze.getBlockSize())
+        this.levelId = 0
+
+        this.init(this.levelId)
+
         this.bindEvents()
         this.draw()
+
+    }
+
+    init(levelId) {
+        this.level = LevelFactory.getLevelFromId(levelId)
+        this.maze = new Maze(this.canvas, this.level.mapData)
+        this.player = new Player(this.maze.getBlockSize(), this.level.playerStartPosition)
+
+        this.state = {
+            isDone: false,
+            movesLeft: this.level.moves
+        }
     }
 
     initCanvas(id) {
@@ -28,6 +43,9 @@ export default class Game {
     }
 
     onKeyPress(e) {
+        if(this.state.isDone) return
+        if(this.state.movesLeft === 0) return
+
         let currentPosition = this.player.position
         let nextPosition = null
         switch(e.keyCode) {
@@ -47,23 +65,25 @@ export default class Game {
                 return
         }
 
-        let isValid = this.validateNextPosition(nextPosition)
+        this.state.movesLeft -= 1
+        if(this.state.movesLeft === 0) this.lost()
+
+        let isValid = this.maze.isNextPositionValid(nextPosition)
         if(!isValid) return
 
         this.player.position = nextPosition
-        let isFinish = this.isNextPointFinish(this.player.position)
-        if(!isFinish) return
-
-        console.log('done')
-
+        this.state.isDone = this.maze.isNextPointFinish(nextPosition)
+        if(this.state.isDone) this.won()
     }
 
-    validateNextPosition(nextPosition) {
-        return this.maze.isNextPositionValid(nextPosition)
+    lost() {
+        console.log('you lost')
     }
 
-    isNextPointFinish(nextPosition) {
-        return this.maze.isNextPointFinish(nextPosition)
+    won() {
+        this.levelId += 1
+        this.init(this.levelId)
+        console.log('you won')
     }
 
     draw() {

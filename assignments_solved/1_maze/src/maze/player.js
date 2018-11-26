@@ -1,8 +1,8 @@
 import Vector from './vector'
 
 export default class Player {
-    constructor(playerSize) {
-        this.position = new Vector(3,0)
+    constructor(playerSize, playerPosition) {
+        this.position = playerPosition
         this.size = playerSize
     }
 
@@ -10,9 +10,4 @@ export default class Player {
         ctx.fillStyle = 'blue'
         ctx.fillRect(this.position.x * this.size, this.position.y * this.size, this.size, this.size)
     }
-
-    moveToPosition() {
-
-    }
-
 }
