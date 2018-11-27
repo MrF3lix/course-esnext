@@ -52,3 +52,15 @@ Drawing a rectangel on the canvas
         ctx.fillRect(x, y, width, height)
     }
 ```
+
+## Example
+
+This is how the game could look like. 
+The blue square represents the player.
+The green square represents the finish.
+
+![Example 1](../Assets/Assignment_Maze_Example_1.png)
+
+The size of the maze shouln't matter as long as the maze is square.
+The black squares represent obstacles.
+![Example 1](../Assets/Assignment_Maze_Example_2.png)
