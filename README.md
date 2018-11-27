@@ -8,4 +8,4 @@ Find out more about the ES.Next features [here](./doc/Features.md).
 
 ## Assignments
 
-1. [Maze game](./doc/Assignments/1_Maze.md).
+1. [Maze game](./doc/assignments/1_Maze.md).

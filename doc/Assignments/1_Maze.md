@@ -17,7 +17,7 @@ Create a small game where a player has to go through a maze.
 - If the player is on the finish square the round is finished.
 
 The following class diagram serves as an outline on how the game could be implemented. 
-![maze class diagram](../Assets/Assignment_Maze.png)
+![maze class diagram](../assets/assignment_maze.png)
 
 
 ## Additional infos
@@ -59,8 +59,8 @@ This is how the game could look like.
 The blue square represents the player.
 The green square represents the finish.
 
-![Example 1](../Assets/Assignment_Maze_Example_1.png)
+![Example 1](../assets/assignment_maze_example_1.png)
 
 The size of the maze shouln't matter as long as the maze is square.
 The black squares represent obstacles.
-![Example 1](../Assets/Assignment_Maze_Example_2.png)
+![Example 2](../assets/assignment_maze_example_2.png)
