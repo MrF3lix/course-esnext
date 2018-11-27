@@ -1,3 +1,5 @@
+# Maze
+
 ## Setup
 
 1. Go to the folder `./assignments/1_maze/`
