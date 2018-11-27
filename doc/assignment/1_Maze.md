@@ -1,14 +1,15 @@
-# Maze
-
 ## Setup
+
 1. Go to the folder `./assignments/1_maze/`
 2. Run `npm run start:dev`
 3. Open `http://localhost:8080` in the browser
 
 ## Todo
+
 Create a small game where a player has to go through a maze.
 
 **Requirements**
+
 - The maze is awlays a square. And consists of N amount of squares.
 - Each square has one of three type (0: Empty / 1: Obstacle / 2: Finish).
 - The player cannot be on the same square as an obstacle.
@@ -25,6 +26,7 @@ The following class diagram serves as an outline on how the game could be implem
 **How to use the HTML5 cavnas**
 
 Initializing the canvas correctly
+
 ```JavaScript
     // Get the canvas element from the DOM
     this.canvas = document.getElementById(canvasElementId)
@@ -38,6 +40,7 @@ Initializing the canvas correctly
 ```
 
 Drawing a rectangel on the canvas
+
 ```JavaScript
     draw() {
         // this calls the draw function everytime the browser is ready to draw a new frame
