@@ -27,7 +27,7 @@ The following class diagram serves as an outline on how the game could be implem
 Initializing the canvas correctly
 ```JavaScript
     // Get the canvas element from the DOM
-    this.canvas = document.getGelementById(canvasElementId)
+    this.canvas = document.getElementById(canvasElementId)
 
     // Assign width and height from CSS to HTML
     this.canvas.width = this.canvas.clientWidth
