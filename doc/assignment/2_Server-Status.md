@@ -38,5 +38,5 @@ Retrieve data from socket
 ## Example
 
 This is how the end result could look like. 
-
+    
 //TODO ADD END RESULT
