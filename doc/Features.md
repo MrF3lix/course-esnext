@@ -25,7 +25,7 @@ PI = 42 // output: "SyntaxError: "PI" is read-only"
 
 Instead of construction a string like this:
 ```JavaScript
-"Helo " + name + ", nice to meet you!"
+"Hello " + name + ", nice to meet you!"
 ```
 We can now use:
 ```JavaScript
@@ -92,7 +92,7 @@ const loadUserProfile = async () => {
 Instead of using `.then()` after we call the promise, we can now use the keyword `await`. This way we have less code and nesting.
 
 
-### Classes and inherticance
+### Classes and inheritance
 
 To create a class use the `class` key word.
 
