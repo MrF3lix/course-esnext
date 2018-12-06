@@ -14,12 +14,16 @@ for(let n=0;n<10;n++) {}
 console.log(n) // output: "Error: n is not defined"
 ```
 
-Const variables can only be set once and are not reassignable
+Const variables can only be set once and are not reassignable.
 
 ```JavaScript
 const PI = 3.141592653589793
 PI = 42 // output: "SyntaxError: "PI" is read-only"
 ```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
 
 ### Template literal strings
 
@@ -31,6 +35,8 @@ We can now use:
 ```JavaScript
 `Hello ${name}, nice to meet you!`
 ```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 ### Arrow functions
 
@@ -56,6 +62,8 @@ setTimeout(() => {
 Binding `this` is not needed anymore because the arrow functions don't have their own `this` scope.
 Arrow functions are usually used for non-method functions. Those are functions that are not connected within a class.
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
 ### Promises
 
 A promise object represents the eventual outcome of an asynchronous operation. And it's used like this:
@@ -71,6 +79,8 @@ getUserProfile.then(profile => {
     console.log(profile) // output: "Felix Saaro"
 })
 ```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 ### Async / Await
 
@@ -91,6 +101,8 @@ const loadUserProfile = async () => {
 
 Instead of using `.then()` after we call the promise, we can now use the keyword `await`. This way we have less code and nesting.
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
 
 ### Classes and inheritance
 
@@ -134,6 +146,11 @@ export default class MobileHeader extends Header {
 
 The keyword `super` allows us to call functions on the parent class. Using it in the constructor allows us to inisiate the parents constructor.
 
+Comparison ES5 / ES6
+https://gist.github.com/remarkablemark/fa62af0a2c57f5ef54226cae2258b38d
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
 ### Object Rest/Spread operator
 
@@ -159,3 +176,5 @@ let objectCombinded = {
 
 console.log(objectCombinded) //output: { a:1, b:2, c: { d: 3 } }
 ```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
