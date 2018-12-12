@@ -1,0 +1,75 @@
+@import "reset";
+@import url('https://use.typekit.net/ntw7erw.css');
+$dark: #000000;
+$light: #FFFFFF;
+* {
+    font-family: 'europa', 'helvetica neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: inherit;
+}
+
+.inner {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    position: relative;
+    z-index: 1000;
+    height: 75px;
+    background: $dark;
+    color: $light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        padding: 20px;
+        img {
+            height: 55px;
+        }
+    }
+    #navigation--toggle {
+        cursor: pointer;
+        user-select: none;
+        padding: 20px;
+    }
+}
+
+#navigation {
+    max-width: 500px;
+    height: calc(100vh);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background: yellow;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+    padding: 100px 100px;
+    &.navigation--open {
+        transform: translateX(0);
+    }
+    .navigation__items {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+            font-size: 28px;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 700;
+            text-decoration: none;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
