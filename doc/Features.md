@@ -64,6 +64,23 @@ Arrow functions are usually used for non-method functions. Those are functions t
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
+### Map
+
+Map is a function to iterate over an array while returning a new one.
+
+```JavaScript
+const nordicCountries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+
+const scandinavianCountries = nordicCountries.map(country => {
+    if(country != 'Finland' && country != 'Iceland') {
+        return country
+    }
+})
+
+```
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
 ### Promises
 
 A promise object represents the eventual outcome of an asynchronous operation. And it's used like this:
