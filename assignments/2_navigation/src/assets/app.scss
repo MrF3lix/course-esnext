@@ -48,10 +48,8 @@ header {
     z-index: 100;
     top: 0;
     right: 0;
-    background: yellow;
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
-    padding: 100px 100px;
     &.navigation--open {
         transform: translateX(0);
     }
@@ -61,15 +59,38 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        a {
-            font-size: 28px;
-            padding: 10px 0;
-            text-align: center;
-            font-weight: 700;
-            text-decoration: none;
-            &:hover {
-                transform: scale(1.1);
-            }
+        position: relative;
+        z-index: 60;
+        padding: 100px 100px;
+        background: yellow;
+    }
+    .sub__navigation {
+        background: green;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+        padding: 100px 100px;
+        transition: transform 300ms ease-in-out;
+        &.sub__navigation--open {
+            transform: translateX(-100%)
+        }
+    }
+    a {
+        font-size: 28px;
+        padding: 10px 0;
+        text-align: center;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
         }
     }
 }
